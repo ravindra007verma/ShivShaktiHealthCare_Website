@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Shiv Shakti Health Care — Advanced Medical Care</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div>📍 14 Shiv Shakti Road, Medical District, Mumbai 400 001 &nbsp;|&nbsp; <a href="tel:+912240001234">+91 22 4000 1234</a></div>
+  <div class="topbar-right">
+    <span>Mon–Sat: 8AM–8PM</span>
+    <span class="topbar-pill">🟢 Now Open</span>
+    <a href="#">Patient Portal</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="logo">
+    <img src="SHIV SHAKTI CARE logo.png" alt="Shiv Shakti Health Care" class="logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#doctors">Doctors</a></li>
+    <li><a href="#hiw">How it Works</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="tel:+912240001234" class="btn-nav-ghost">📞 Call Now</a>
+  </div>
+  <div class="hamburger" id="ham" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="close-btn" onclick="toggleMenu()">✕</button>
+  <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#doctors" onclick="toggleMenu()">Doctors</a>
+  <a href="#hiw" onclick="toggleMenu()">How it Works</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      <span class="hero-badge-text">NABH Accredited · Est. 1987</span>
+    </div>
+    <h1>Trusted care for your family<br><span class="line2">Simple, reliable, compassionate health support.</span></h1>
+    <p class="hero-desc">Shiv Shakti Health Care brings expert doctors, fast diagnostics, and caring guidance in one place.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-hero-primary">Contact Us</a>
+      <a href="#services" class="btn-hero-ghost">See Services</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-main-card simple">
+      <div class="hcard-header">
+        <div class="hcard-title">Making your visit easy</div>
+      </div>
+      <p class="hero-card-copy">Appointments, consultations, and tests are arranged fast so you can focus on feeling better.</p>
+      <div class="hero-feature-grid">
+        <div class="hero-feature">Friendly care team</div>
+        <div class="hero-feature">Clear treatment plans</div>
+        <div class="hero-feature">Support throughout your stay</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK ACCESS -->
+<div class="quick-access">
+  <a class="qa-item" href="#">
+    <div class="qa-icon" style="background:#f0f6ff"><svg viewBox="0 0 24 24" fill="none" stroke="#1e88e5" stroke-width="2"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div>
+    <div><div class="qa-label">Lab Reports</div><div class="qa-sub">Download instantly</div></div>
+  </a>
+  <a class="qa-item" href="#">
+    <div class="qa-icon" style="background:#f0faf5"><svg viewBox="0 0 24 24" fill="none" stroke="#00897b" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+    <div><div class="qa-label">Find a Doctor</div><div class="qa-sub">120+ specialists</div></div>
+  </a>
+  <a class="qa-item" href="#">
+    <div class="qa-icon" style="background:#fff8f0"><svg viewBox="0 0 24 24" fill="none" stroke="#fb8c00" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+    <div><div class="qa-label">OPD Timings</div><div class="qa-sub">Mon–Sun hours</div></div>
+  </a>
+  <a class="qa-item" href="#">
+    <div class="qa-icon" style="background:#f5f0ff"><svg viewBox="0 0 24 24" fill="none" stroke="#8e24aa" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+    <div><div class="qa-label">24/7 Helpline</div><div class="qa-sub">Always available</div></div>
+  </a>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="mtrack">
+    <span class="mitem">Cardiology</span><span class="mitem">Neurology</span><span class="mitem">Orthopedics</span><span class="mitem">Oncology</span><span class="mitem">Pediatrics</span><span class="mitem">Emergency Care</span><span class="mitem">Radiology</span><span class="mitem">Dermatology</span><span class="mitem">Ophthalmology</span><span class="mitem">Endocrinology</span><span class="mitem">Gastroenterology</span>
+    <span class="mitem">Cardiology</span><span class="mitem">Neurology</span><span class="mitem">Orthopedics</span><span class="mitem">Oncology</span><span class="mitem">Pediatrics</span><span class="mitem">Emergency Care</span><span class="mitem">Radiology</span><span class="mitem">Dermatology</span><span class="mitem">Ophthalmology</span><span class="mitem">Endocrinology</span><span class="mitem">Gastroenterology</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services-wrap" id="services">
+  <div class="services-top reveal">
+    <div>
+      <div class="s-label">What We Treat</div>
+      <h2 class="s-title">World-class <em>specialties</em></h2>
+    </div>
+    <a href="#contact" class="btn-nav-fill">View All Departments →</a>
+  </div>
+  <div class="services-grid">
+    <div class="sc reveal">
+      <div class="sc-icon i-red"><svg viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+      <div class="sc-name">Cardiology</div>
+      <div class="sc-desc">Advanced cardiac diagnostics, angioplasty, bypass surgery, and heart failure management by our award-winning cardiac team.</div>
+      <div class="sc-tags"><span class="sc-tag tag-red">Angioplasty</span><span class="sc-tag tag-red">ECG</span><span class="sc-tag tag-red">Bypass</span></div>
+      <a href="#contact" class="sc-arrow">Learn more →</a>
+    </div>
+    <div class="sc reveal">
+      <div class="sc-icon i-blue"><svg viewBox="0 0 24 24" fill="none"><path d="M9.5 2A2.5 2.5 0 0112 4.5v15a2.5 2.5 0 01-4.96-.46 2.5 2.5 0 01-1.07-4.68 3 3 0 01.34-5.58 2.5 2.5 0 01-1.32-2.06 2.5 2.5 0 014.5-1.28"/><path d="M14.5 2A2.5 2.5 0 0012 4.5v15a2.5 2.5 0 004.96-.46 2.5 2.5 0 001.07-4.68 3 3 0 00-.34-5.58 2.5 2.5 0 001.32-2.06 2.5 2.5 0 00-4.5-1.28"/></svg></div>
+      <div class="sc-name">Neurology</div>
+      <div class="sc-desc">Expert care for brain, spine, and nervous system conditions — from migraines and epilepsy to complex stroke management.</div>
+      <div class="sc-tags"><span class="sc-tag tag-blue">MRI/CT Scan</span><span class="sc-tag tag-blue">Stroke Care</span></div>
+      <a href="#contact" class="sc-arrow">Learn more →</a>
+    </div>
+    <div class="sc reveal">
+      <div class="sc-icon i-green"><svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div class="sc-name">Orthopedics</div>
+      <div class="sc-desc">Minimally invasive joint replacements, sports injury repair, and robotic-assisted spine surgery for faster recovery.</div>
+      <div class="sc-tags"><span class="sc-tag tag-green">Robotic Surgery</span><span class="sc-tag tag-green">Joints</span></div>
+      <a href="#contact" class="sc-arrow">Learn more →</a>
+    </div>
+    <div class="sc reveal">
+      <div class="sc-icon i-purple"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+      <div class="sc-name">Oncology</div>
+      <div class="sc-desc">Comprehensive cancer care — immunotherapy, targeted therapy, and radiation coordinated by a multidisciplinary tumour board.</div>
+      <div class="sc-tags"><span class="sc-tag tag-purple">Chemotherapy</span><span class="sc-tag tag-purple">Radiation</span></div>
+      <a href="#contact" class="sc-arrow">Learn more →</a>
+    </div>
+    <div class="sc reveal">
+      <div class="sc-icon i-orange"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg></div>
+      <div class="sc-name">Pediatrics</div>
+      <div class="sc-desc">Warm, child-centred care for newborns through adolescents. Neonatology, paediatric surgery, and developmental health.</div>
+      <div class="sc-tags"><span class="sc-tag tag-orange">Neonatology</span><span class="sc-tag tag-orange">PICU</span></div>
+      <a href="#contact" class="sc-arrow">Learn more →</a>
+    </div>
+    <div class="sc reveal">
+      <div class="sc-icon i-teal"><svg viewBox="0 0 24 24" fill="none"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+      <div class="sc-name">Emergency Care</div>
+      <div class="sc-desc">Level-1 trauma centre. 24/7 rapid triage, critical care units, and immediate surgical intervention — every minute matters.</div>
+      <div class="sc-tags"><span class="sc-tag tag-green">Trauma Center</span><span class="sc-tag tag-green">ICU</span></div>
+      <a href="#contact" class="sc-arrow">Learn more →</a>
+    </div>
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<div class="numbers">
+  <div class="num-item reveal">
+    <div class="num-val">38<span class="num-plus">K+</span></div>
+    <div class="num-line"></div>
+    <div class="num-label">Patients Served</div>
+  </div>
+  <div class="num-item reveal">
+    <div class="num-val">120<span class="num-plus">+</span></div>
+    <div class="num-line"></div>
+    <div class="num-label">Expert Doctors</div>
+  </div>
+  <div class="num-item reveal">
+    <div class="num-val">20<span class="num-plus">+</span></div>
+    <div class="num-line"></div>
+    <div class="num-label">Departments</div>
+  </div>
+  <div class="num-item reveal">
+    <div class="num-val">37<span class="num-plus">yr</span></div>
+    <div class="num-line"></div>
+    <div class="num-label">Years of Trust</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+
+
+
+<!-- DOCTORS -->
+<section class="doctors-wrap" id="doctors">
+  <div class="doctors-top reveal">
+    <div class="s-label">Meet Our Team</div>
+    <h2 class="s-title">Our <em>expert</em> physicians</h2>
+    <p class="s-desc" style="max-width:500px;margin:0 auto">Board-certified specialists committed to delivering the highest standard of patient care.</p>
+  </div>
+  <div class="doctors-grid">
+
+    <div class="dc reveal">
+      <div class="dc-photo dg-1">
+        <svg class="doc-fig" viewBox="0 0 200 230" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="68" r="36" fill="rgba(255,255,255,.6)"/>
+          <ellipse cx="100" cy="230" rx="72" ry="68" fill="rgba(255,255,255,.45)"/>
+          <circle cx="100" cy="63" r="22" fill="rgba(255,255,255,.8)"/>
+          <!-- stethoscope hint -->
+          <path d="M88 95 Q80 115 85 125 Q92 140 100 138 Q108 140 115 125 Q120 115 112 95" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="3"/>
+        </svg>
+        <div class="dc-overlay"></div>
+        <div class="dc-social">
+          <div class="dc-social-btn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+          <div class="dc-social-btn"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 0112 18.84a19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+        </div>
+      </div>
+      <div class="dc-info">
+        <div class="dc-name">Dr. Anika Sharma</div>
+        <div class="dc-spec">Senior Cardiologist</div>
+      </div>
+    </div>
+
+    <div class="dc reveal">
+      <div class="dc-photo dg-2">
+        <svg class="doc-fig" viewBox="0 0 200 230" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="68" r="36" fill="rgba(255,255,255,.55)"/>
+          <ellipse cx="100" cy="230" rx="72" ry="68" fill="rgba(255,255,255,.4)"/>
+          <circle cx="100" cy="63" r="22" fill="rgba(255,255,255,.78)"/>
+          <path d="M88 95 Q80 115 85 125 Q92 140 100 138 Q108 140 115 125 Q120 115 112 95" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="3"/>
+        </svg>
+        <div class="dc-overlay"></div>
+        <div class="dc-social">
+          <div class="dc-social-btn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+          <div class="dc-social-btn"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 0112 18.84a19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+        </div>
+      </div>
+      <div class="dc-info">
+        <div class="dc-name">Dr. Rahul Mehta</div>
+        <div class="dc-spec">Neurologist</div>
+      </div>
+    </div>
+
+    <div class="dc reveal">
+      <div class="dc-photo dg-3">
+        <svg class="doc-fig" viewBox="0 0 200 230" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="68" r="36" fill="rgba(255,255,255,.58)"/>
+          <ellipse cx="100" cy="230" rx="72" ry="68" fill="rgba(255,255,255,.42)"/>
+          <circle cx="100" cy="63" r="22" fill="rgba(255,255,255,.8)"/>
+          <path d="M88 95 Q80 115 85 125 Q92 140 100 138 Q108 140 115 125 Q120 115 112 95" fill="none" stroke="rgba(255,255,255,.48)" stroke-width="3"/>
+        </svg>
+        <div class="dc-overlay"></div>
+        <div class="dc-social">
+          <div class="dc-social-btn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+          <div class="dc-social-btn"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 0112 18.84a19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+        </div>
+      </div>
+      <div class="dc-info">
+        <div class="dc-name">Dr. Priya Nair</div>
+        <div class="dc-spec">Orthopaedic Surgeon</div>
+      </div>
+    </div>
+
+    <div class="dc reveal">
+      <div class="dc-photo dg-4">
+        <svg class="doc-fig" viewBox="0 0 200 230" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="68" r="36" fill="rgba(255,255,255,.55)"/>
+          <ellipse cx="100" cy="230" rx="72" ry="68" fill="rgba(255,255,255,.4)"/>
+          <circle cx="100" cy="63" r="22" fill="rgba(255,255,255,.78)"/>
+          <path d="M88 95 Q80 115 85 125 Q92 140 100 138 Q108 140 115 125 Q120 115 112 95" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="3"/>
+        </svg>
+        <div class="dc-overlay"></div>
+        <div class="dc-social">
+          <div class="dc-social-btn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+          <div class="dc-social-btn"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 0112 18.84a19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+        </div>
+      </div>
+      <div class="dc-info">
+        <div class="dc-name">Dr. Suresh Pillai</div>
+        <div class="dc-spec">Oncologist</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="hiw" id="hiw">
+  <div class="hiw-top reveal">
+    <div class="s-label">Simple Process</div>
+    <h2 class="s-title">Getting care <em>made easy</em></h2>
+    <p class="s-desc" style="max-width:480px;margin:0 auto;margin-top:.8rem">From booking to recovery — we make every step seamless, transparent, and stress-free.</p>
+  </div>
+  <div class="steps">
+    <div class="step reveal">
+      <div class="step-num">01</div>
+      <div class="step-title">Book Online</div>
+      <div class="step-desc">Reach our care team or call us — choose your doctor, department, and preferred time slot in minutes.</div>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">02</div>
+      <div class="step-title">Consult a Specialist</div>
+      <div class="step-desc">Meet your assigned specialist in-person or via telehealth. Receive a thorough evaluation and personalised care plan.</div>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">03</div>
+      <div class="step-title">Diagnostics & Treatment</div>
+      <div class="step-desc">Access our in-house labs, imaging, and state-of-the-art surgical suites — all under one roof for speed and convenience.</div>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">04</div>
+      <div class="step-title">Recovery & Follow-up</div>
+      <div class="step-desc">Our care doesn't end at discharge. Get post-treatment support, physiotherapy, and digital follow-up consultations.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<!--<section class="testi-wrap">
+  <div class="testi-top reveal">
+    <div class="s-label">Patient Stories</div>
+    <h2 class="s-title">Voices of <em style="color:var(--gold)">recovery</em></h2>
+  </div>
+  <div class="testi-grid">
+    <div class="tc reveal">
+      <div class="tc-stars">★★★★★</div>
+      <p class="tc-text">"After my bypass surgery at Shiv Shakti, I was walking within 4 days. The cardiology team's expertise and the nurses' warmth made an overwhelming experience truly manageable."</p>
+      <div class="tc-author">
+        <div class="tc-av" style="background:var(--teal)">R</div>
+        <div><div class="tc-name">Rajesh Kumar</div><div class="tc-role">Cardiac patient · 2024</div></div>
+      </div>
+    </div>
+    <div class="tc reveal">
+      <div class="tc-stars">★★★★★</div>
+      <p class="tc-text">"The paediatric team treated my daughter with such gentleness. From diagnosis to recovery, every step was explained clearly. We never felt alone through any of it."</p>
+      <div class="tc-author">
+        <div class="tc-av" style="background:#6a4fa3">M</div>
+        <div><div class="tc-name">Meera Joshi</div><div class="tc-role">Parent · 2025</div></div>
+      </div>
+    </div>
+    <div class="tc reveal">
+      <div class="tc-stars">★★★★★</div>
+      <p class="tc-text">"Dr. Mehta diagnosed my rare condition after years of searching for answers. The neurological team here is simply outstanding. I am finally living pain-free."</p>
+      <div class="tc-author">
+        <div class="tc-av" style="background:#c8793e">A</div>
+        <div><div class="tc-name">Aditya Singh</div><div class="tc-role">Neurology patient · 2025</div></div>
+      </div>
+    </div>
+  </div>
+</section>-->
+
+<!-- EMERGENCY -->
+<!-- <div class="emergency">
+  <div class="emer-left">
+    <div class="emer-icon-wrap">
+      <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+    </div>
+    <div>
+      <div class="emer-title">24/7 Emergency Services</div>
+      <div class="emer-sub">Level-1 Trauma Centre · Always open · Walk-ins welcome</div>
+    </div>
+  </div>
+  <div class="emer-right">
+    <div class="emer-tag">Emergency Hotline</div>
+    <div class="emer-num">1800-SHIVSHAK</div>
+    <a href="tel:18007448525" class="btn-emer">
+      <svg width="16" height="16" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 0112 18.84a19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      Call Now
+    </a>
+  </div>
+</div> -->
+
+<!-- CONTACT -->
+<section class="contact-wrap" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info reveal">
+      <div class="s-label">Get in Touch</div>
+      <h2 class="s-title">Connect with us <em>today</em></h2>
+      <p class="s-desc">Our care coordinators respond within 2 hours. Walk-ins always welcome.</p>
+      <div class="cinfo-items">
+        <div class="cinfo-item">
+          <div class="cinfo-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="cinfo-label">Address</div><div class="cinfo-val">14 Shiv Shakti Road, Medical District, Mumbai 400 001</div></div>
+        </div>
+        <div class="cinfo-item">
+          <div class="cinfo-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 0112 18.84a19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div><div class="cinfo-label">Phone</div><div class="cinfo-val">+91 22 4000 1234</div></div>
+        </div>
+        <div class="cinfo-item">
+          <div class="cinfo-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><div class="cinfo-label">Email</div><div class="cinfo-val">contact@shivshaktihealthcare.in</div></div>
+        </div>
+        <div class="cinfo-item">
+          <div class="cinfo-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><div class="cinfo-label">OPD Hours</div><div class="cinfo-val">Mon–Sat 8AM–8PM · Sun 9AM–2PM</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo-name">Shiv Shakti <span>Health Care</span></div>
+      <p class="footer-brand">Committed to healing, guided by science, and driven by compassion since 1987.</p>
+      <div class="ft-badge">🏥 NABH Accredited &nbsp;·&nbsp; ISO 9001:2015</div>
+    </div>
+    <div>
+      <div class="footer-col-head">Specialties</div>
+      <ul class="footer-links">
+        <li><a href="#">Cardiology</a></li>
+        <li><a href="#">Neurology</a></li>
+        <li><a href="#">Orthopedics</a></li>
+        <li><a href="#">Oncology</a></li>
+        <li><a href="#">Pediatrics</a></li>
+        <li><a href="#">Emergency</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-head">Hospital</div>
+      <ul class="footer-links">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Doctors</a></li>
+        <li><a href="#">Research Centre</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">News & Media</a></li>
+        <li><a href="#">CSR</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-head">Support</div>
+      <ul class="footer-links">
+        <li><a href="#">Patient Portal</a></li>
+        <li><a href="#">Insurance & Billing</a></li>
+        <li><a href="#">International Patients</a></li>
+        <li><a href="#">Feedback</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Shiv Shakti Health Care. All rights reserved.</span>
+    <span>Made with care for every patient.</span>
+  </div>
+</footer>
+
+<script>
+// Custom cursor
+const cur = document.getElementById('cursor');
+const ring = document.getElementById('cursor-ring');
+document.addEventListener('mousemove', e => {
+  cur.style.left = e.clientX + 'px';
+  cur.style.top = e.clientY + 'px';
+  setTimeout(() => {
+    ring.style.left = e.clientX + 'px';
+    ring.style.top = e.clientY + 'px';
+  }, 60);
+});
+document.querySelectorAll('a,button,.sc,.dc,.tc,.cinfo-item').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    cur.style.width = '18px'; cur.style.height = '18px';
+    cur.style.background = 'var(--gold)';
+    ring.style.width = '48px'; ring.style.height = '48px';
+  });
+  el.addEventListener('mouseleave', () => {
+    cur.style.width = '10px'; cur.style.height = '10px';
+    cur.style.background = 'var(--teal)';
+    ring.style.width = '36px'; ring.style.height = '36px';
+  });
+});
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 60);
+    }
+  });
+}, { threshold: 0.1 });
+reveals.forEach(el => obs.observe(el));
+
+// Mobile menu
+function toggleMenu() {
+  document.getElementById('mobileNav').classList.toggle('open');
+}
+
+// Generate mini chart bars dynamically
+const chart = document.getElementById('minichart');
+if (chart) {
+  const heights = [30, 55, 40, 80, 50, 70, 45];
+  heights.forEach((h, i) => {
+    const b = document.createElement('div');
+    b.className = 'bar-item';
+    b.style.height = h + '%';
+    chart.appendChild(b);
+  });
+}
+
+// Animated counter
+function animateCounters() {
+  document.querySelectorAll('.num-val').forEach(el => {
+    const text = el.textContent;
+    const num = parseInt(text);
+    if (isNaN(num)) return;
+    let start = 0;
+    const duration = 1800;
+    const step = (timestamp) => {
+      if (!start) start = timestamp;
+      const progress = Math.min((timestamp - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.firstChild.textContent = Math.round(eased * num);
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  });
+}
+const numbersSection = document.querySelector('.numbers');
+if (numbersSection) {
+  const cObs = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) { animateCounters(); cObs.disconnect(); }
+  }, { threshold: 0.3 });
+  cObs.observe(numbersSection);
+}
+</script>
+</body>
+</html>
