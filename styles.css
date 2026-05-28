@@ -56,25 +56,18 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.88);backdrop-
 
 /* ── HERO ── */
 .hero{
-  min-height:calc(100vh - 70px);
-  display:grid;
-  grid-template-columns:1.05fr .95fr;
-  align-items:center;
-  padding:3rem 6%;
+  height:calc(100vh - 70px);
+  width:100%;
+  display:block;
+  padding:0;
   overflow:hidden;
-  background:url("./Hospital/Image.jpeg") center/cover no-repeat;
+  background-color:var(--navy);
+  background-image:url("./Hospital/Image.jpeg");
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-size:cover;
+  background-attachment:scroll;
 }
-.hero-left{position:relative;z-index:2;padding:0}
-.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);padding:.45rem 1rem;border-radius:999px;margin-bottom:1.4rem}
-.hero-badge-dot{width:8px;height:8px;background:var(--gold);border-radius:50%}
-.hero-badge-text{font-size:.78rem;font-weight:600;color:rgba(255,255,255,.85);letter-spacing:.08em;text-transform:uppercase}
-.hero-right{position:relative;z-index:2;display:flex;align-items:center;justify-content:flex-end}
-.hero-main-card.simple{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.18);border-radius:24px;padding:2rem;max-width:380px;box-shadow:0 28px 50px rgba(0,0,0,.18)}
-.hero-card-copy{font-size:.98rem;line-height:1.8;color:rgba(255,255,255,.86);margin-top:1rem;margin-bottom:1.5rem}
-.hero-feature-grid{display:grid;gap:.8rem}
-.hero-feature{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:.95rem 1rem;font-weight:600;color:#fff;line-height:1.4}
-.hcard-header{display:flex;align-items:center;margin-bottom:1.3rem}
-.hcard-title{font-family:var(--font-d);font-size:1.35rem;color:#fff;font-weight:700}
 
 
 /* ── QUICK ACCESS ── */
@@ -316,6 +309,7 @@ footer{background:var(--navy);padding:4.5rem 6% 2rem}
   .topbar{display:none}
   .nav-links,.nav-right{display:none}
   .hamburger{display:flex}
+  .hero{background-size:contain;background-position:top center;}
   .services-grid,.testi-grid{grid-template-columns:1fr}
   .doctors-grid{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr 1fr}
