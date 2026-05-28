@@ -55,7 +55,9 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.88);backdrop-
 .hamburger span{width:22px;height:2px;background:var(--navy);border-radius:2px;transition:all .3s}
 
 /* ── HERO ── */
-.hero{min-height:calc(100vh - 70px);background:url("./Hospital/Image.jpeg");position:relative;overflow:hidden;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;padding:3rem 6%}
+.hero{min-height:calc(100vh - 70px);background:url("./Hospital/Image.jpeg"); background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;}
 .hero-left{position:relative;z-index:2;padding:0}
 .hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);padding:.45rem 1rem;border-radius:999px;margin-bottom:1.4rem}
 .hero-badge-dot{width:8px;height:8px;background:var(--gold);border-radius:50%}
