@@ -55,21 +55,19 @@ nav{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.88);backdrop-
 .hamburger span{width:22px;height:2px;background:var(--navy);border-radius:2px;transition:all .3s}
 
 /* ── HERO ── */
-.hero{min-height:calc(100vh - 70px);background:url("./Hospital/Image.jpeg"); background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;}
+.hero{
+  min-height:calc(100vh - 70px);
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  align-items:center;
+  padding:3rem 6%;
+  overflow:hidden;
+  background:url("./Hospital/Image.jpeg") center/cover no-repeat;
+}
 .hero-left{position:relative;z-index:2;padding:0}
 .hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);padding:.45rem 1rem;border-radius:999px;margin-bottom:1.4rem}
 .hero-badge-dot{width:8px;height:8px;background:var(--gold);border-radius:50%}
 .hero-badge-text{font-size:.78rem;font-weight:600;color:rgba(255,255,255,.85);letter-spacing:.08em;text-transform:uppercase}
-.hero h1{font-family:var(--font-d);font-size:clamp(2.6rem,4.4vw,4.8rem);font-weight:700;line-height:1.05;color:#fff;margin-bottom:1.25rem}
-.hero h1 .line2{display:block;font-style:normal;color:rgba(255,255,255,.88);font-weight:400;margin-top:.35rem}
-.hero-desc{font-size:1rem;line-height:1.75;color:rgba(255,255,255,.82);max-width:430px;margin-bottom:2rem;font-weight:300}
-.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-hero-primary{background:var(--grad-gold);color:var(--navy);padding:.95rem 1.9rem;border-radius:14px;font-weight:700;font-size:.95rem;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:.55rem;transition:all .25s}
-.btn-hero-primary:hover{transform:translateY(-2px);box-shadow:0 14px 35px rgba(232,184,109,.35)}
-.btn-hero-ghost{border:1.5px solid rgba(255,255,255,.32);color:#fff;padding:.95rem 1.9rem;border-radius:14px;font-weight:600;font-size:.95rem;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:.55rem;transition:all .25s}
-.btn-hero-ghost:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.45);transform:translateY(-1px)}
 .hero-right{position:relative;z-index:2;display:flex;align-items:center;justify-content:flex-end}
 .hero-main-card.simple{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.18);border-radius:24px;padding:2rem;max-width:380px;box-shadow:0 28px 50px rgba(0,0,0,.18)}
 .hero-card-copy{font-size:.98rem;line-height:1.8;color:rgba(255,255,255,.86);margin-top:1rem;margin-bottom:1.5rem}
@@ -324,7 +322,6 @@ footer{background:var(--navy);padding:4.5rem 6% 2rem}
   .topbar{display:none}
   .nav-links,.nav-right{display:none}
   .hamburger{display:flex}
-  .hero h1{font-size:2.4rem}
   .services-grid,.testi-grid{grid-template-columns:1fr}
   .doctors-grid{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr 1fr}
